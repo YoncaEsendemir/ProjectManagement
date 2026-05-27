@@ -25,7 +25,7 @@ const handleSubmit=(e)=>{
     if (!name.trim()) return;
     const roles= rolesInput.split(',').map(r=>r.trim()).filter(r=>r!=='');
     const skills = skillsInput.split(',').map(s => s.trim()).filter(s => s !== '');
-    onSave({name,rols,skills});
+    onSave({name,roles,skills});
     setName('');
     setRolesInput('');
     setSkillsInput('');

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CryptoJS from 'crypto-js';
 import MemberForm from '../components/MemberForm';
 import MemberList from '../components/MemberList';
-
+import TaskForm from '../components/TaskForm'
 // Şifreleme için gizli anahtar (Normalde .evn dosyalarında saklanır proje yayına alirken sorun yaşanmasın diye burada sakladım)
 const SECRET_KEY = 'qlI/T*_giO.ETuB2j2.+';
 function Dashboard() {
@@ -97,8 +97,18 @@ const encryptAndSave=(key,data)=>{
                 </h2>
                 <TaskForm onSave={saveTask} editingTask={editingTask} members={members} onCancel={()=>setEditingTask(null)}/>
           </div>
-      <div>
+        </div>
 
+        {/*Sağ Sütun: görüntüleme ve yönetim listeleri */}
+        {/*
+        col-span-2: İlgili öğenin veya kutunun, bağlı olduğu grid sisteminde yatay olarak 2 sütunluk yer kaplamasını sağlar */}
+        <div className='lg:col-span-2 flex flex-col space-y-6'>
+            <div className='bg-white-80 p-6 rounded-xl border border-slate-200 shadow-sm'>
+                <div className='border-b border-slate-200 pb-3 mb-4'>
+                    <h2 className='text-base font-semibold text-slate-900'>Üye Listesi ({members.length})</h2>
+                    <p className='text-xs mt- text-slate-900'>Ekip Üyeleri, rolleri ve yetenekleri</p>
+                </div>
+                <MemberList members={members} onEdit={setEditingMember} onDelete={deleteMembers}/>
             </div>
         </div>
     </div>

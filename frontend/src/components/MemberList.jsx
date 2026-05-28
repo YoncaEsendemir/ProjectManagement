@@ -2,7 +2,7 @@ import React from 'react'
 
 function MemberList({members,onEdit,onDelete}) {
   if(members.length===0){
-    return <p className='text-sm text-slate-600 dark:text-slate-300 italic-center py-3'> </p>
+    return <p className='text-sm text-slate-600 dark:text-slate-300 italic-center py-8'> </p>
   }
   return (
     <div className='divide-y divide-slate-100 max-h-72 overflow-y-auto pr-1'>

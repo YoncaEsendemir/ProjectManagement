@@ -70,20 +70,18 @@ const encryptAndSave=(key,data)=>{
     }
 
     const deleteMembers= (id)=>{
-        saveMembers(members.filter(m=>m.id!=id));
+        setMembers(members.filter(m=>m.id!=id));
         setTasks(tasks.map(t=>t.assignedTo === id ?{...t,assignedTo:''}:t));
     }
 
 
-
-    
     const deleteTask=(id)=>{
         setTasks(tasks.filter(t=>t.id!=id));
     };
 
 
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+    <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 '>
         {/* sol sütun giriş formları */}
         <div className='lg:col-span-1 flex flex-col space-y-6'>
             <div className='bg-white/80 dark:bg-slate-900/80 p-6 rounded-xl border border-slate-200 shadow-sm'>

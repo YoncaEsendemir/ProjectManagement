@@ -23,29 +23,29 @@ function TaskList({tasks,members,onEdit,onDelete}) {
         };
   return(
      <div>
-        {tasks.map((task)=>{
+        {tasks.map((task,index)=>{
             const styles=getStatusStyle(task.status);
             return(
-                <div key={tasks.id} className={`p-4 border border-slate-100 border-l-4 ${styles.cardBorder} rounded-r-lg rounded-l-sm bg-slate-50 flex flex-col justify-between shadow-sm`}>
+                <div key={tasks.id} className={`p-3 border border-slate-100 border-l-[12px] ${styles.cardBorder} rounded-r-lg rounded-l-sm ${index %2==0 ? 'bg-white' : 'bg-blue-200/50'} flex flex-col justify-between shadow-sm `}>
                 <div>
                         <div className='flex justify-between items-start mb-2'>
-                            <h3 className='text-sm font-semibold text-slate-900 break-words'>{tasks.title}</h3>
-                            <span className={`text-[10px] px-2 py-0.5 rounded-full border ${styles.badge} font-medium tracking-wide whitespace-nowrap`}>
+                            <h3 className='text-lg font-semibold text-slate-900 break-words'>{task.title}</h3>
+                            <span className={`text-[16px] px-2 py-0.5 rounded-full border ${styles.badge} font-medium tracking-wide whitespace-nowrap`}>
                                 {task.status}
                             </span>
                         </div>
-                        <p className='text-xs text-slate-600 mb-4'>{task.description ||'Açıklama belirtilmedi.'}</p>
+                        <p className='text-[18px] text-slate-600 mb-4'>{task.description ||'Açıklama belirtilmedi.'}</p>
                 </div>
 
                 <div className='flex justify-between items-center pt-2 border-t border-slate-200/60 mt-2'>
-                <span className="text-[11px] text-gray-500 bg-white px-2 py-1 rounded border border-gray-100">
+                <span className="text-[16px] text-gray-700 bg-white px-2 py-1 rounded border border-gray-100">
                 Sorumlu: <strong className="text-gray-700">{getMemberName(task.assignedTo)}</strong>
               </span>
               <div className="flex space-x-1">
-                <button onClick={() => onEdit(task)} className="text-xs text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded transition">
+                <button onClick={() => onEdit(task)} className="text-lg text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded transition">
                   Düzenle
                 </button>
-                <button onClick={() => onDelete(task.id)} className="text-xs text-red-600 hover:bg-red-50 px-2 py-1 rounded transition">
+                <button onClick={() => onDelete(task.id)} className="text-lg text-red-600 hover:bg-red-50 px-2 py-1 rounded transition">
                   Sil
                 </button>
               </div>

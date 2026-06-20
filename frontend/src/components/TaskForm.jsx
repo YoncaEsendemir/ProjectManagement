@@ -34,19 +34,19 @@ function TaskForm({onSave,editingTask,members,onCancel}) {
   return (
    <form onSubmit={handleSubmit} className='space-y-4'>
         <div>
-            <label className='block text-sm font-medium text-slate-900 dark:text-slate-300 mb-2'>Görev Başliği</label>
+            <label className='block text-lg font-medium text-slate-900 dark:text-slate-300 mb-2'>Görev Başliği</label>
             <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder='Yapılacak işin tanımı'
             className='w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-indigo-500' required/>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-slate-900 dark:text-slate-300 mb-2'>Açıklama</label>
+            <label className='block text-lg font-medium text-slate-900 dark:text-slate-300 mb-2'>Açıklama</label>
             <textarea value={description} onChange={(e)=>setDescription(e.target.value)} placeholder='Görev detayları' rows="2"
             className='w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-indigo-500'/>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-slate-900 dark:text-slate-300 mb-2'>Sorumlu Üye</label>
+            <label className='block text-lg font-medium text-slate-900 dark:text-slate-300 mb-2'>Sorumlu Üye</label>
                 <select value={assignedTo} onChange={(e)=>setAssignedTo(e.target.value)}
                     className='w-full px-3 py-2 border border-slate-300  rounded-lg text-sm bg-white-80 focus:outline-none focus:border-indigo-500'>
                         <option value="">Seçınız...</option>
@@ -59,8 +59,8 @@ function TaskForm({onSave,editingTask,members,onCancel}) {
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-slate-700 mb-1'>Durum</label>
-            <select value={status} onChange={(e)=>setStatus(e.target.value)} className='w-full px-2 py-2 border-slate-300 rounded-lg text-sm  bg-white-80 focus:outline-none focus:border-indigo-500'>
+            <label className='block text-lg font-medium text-slate-900 mb-2'>Durum</label>
+            <select value={status} onChange={(e)=>setStatus(e.target.value)} className='w-full px-2 py-2 border-slate-300 rounded-lg text-lg  bg-white-80 focus:outline-none focus:border-indigo-500'>
                 <option value="Yeni Görev">Yeni Görev (Sarı)</option>
                 <option value="Süren Görev">Süren Görev (Mavi)</option>
                 <option value="Biten Görev">Biten Görev (Yeşil)</option>
@@ -68,7 +68,7 @@ function TaskForm({onSave,editingTask,members,onCancel}) {
         </div>
 
         <div className='flex space-x-2 pt-2'>
-            <button type='submit' className='flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-indigo-700 transition'>
+            <button type='submit' className='flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg text-lg font-medium hover:bg-indigo-700 transition'>
                         {editingTask ? 'Görev Güncelle': 'Görev Ekle'}
             </button>
             {

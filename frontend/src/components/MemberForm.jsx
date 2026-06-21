@@ -39,12 +39,12 @@ const handleSubmit=(e)=>{
         </div>
 
         <div>
-            <label className='block text-lg font-medium text-slate-800/50 dark:text-white/80 mb-1'>Roller</label>
+            <label className='block text-lg font-medium text-salte-800/50 dark:text-white/80 mb-1'>Roller</label>
             <input type="text" value={rolesInput}  onChange={(e)=>setRolesInput(e.target.value)} required placeholder="Örn. Frontend Developer, Full-Stack" className="w-full px-3 py-2 border border-slate-400 rounded-lg text-sm focus:outline-none"/>
         </div>
 
         <div>
-            <label className='block text-lg font-medium text-slate-800/50 dark:text-white/80 mb-1'>Roller</label>
+            <label className='block text-lg font-medium text-salte-800/50 dark:text-white/80 mb-1'>Skills</label>
             <input type="text" value={skillsInput}  onChange={(e)=>setSkillsInput(e.target.value)} required placeholder="Örn. Java, C, JavaScript" className="w-full px-3 py-2 border border-slate-400 rounded-lg text-sm focus:outline-none"/>
         </div>
         <div className="flex space-x-2 pt-2">

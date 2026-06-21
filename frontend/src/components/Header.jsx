@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className='w-full border-b border-slate-200/80 dark:border-slate-700/80 backdrop-blur-xl bg-blue-300/50 dark:bg-slate-900/80'>
        {/* max-w-5xl kaldırıldı, tüm ekrana yayılması için w-full yapıldı */}
-       <div className='flex w-full items-center justify-between gap-3 px-6 py-3'>
+       <div className='flex w-full items-center justify-between gap-3 px-6 py-2'>
             
             {/* Sol Taraf: Tamamen Sol Köşede Kalacak Başlık Alanı */}
             <div className='hidden md:block'>

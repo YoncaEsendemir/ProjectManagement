@@ -2,7 +2,9 @@
 
 Bu proje, modern yazılım geliştirme ekiplerinin iş ve üye takibini kolaylaştırmak amacıyla geliştirilmiş dinamik bir frontend uygulamasıdır. 
 
-Eğitim sürecinde edinilen kavramları bütüncül bir şekilde uygulamaya dökmek amacıyla tasarlanan bu projede, bileşen (component) tabanlı mimari ve modern arayüz pratikleri ön planda tutulmuştur.
+Eğitim sürecinde edinilen kahttps://github.com/YoncaEsendemir/ProjectManagement/blob/main/frontend/src/image/ProjectScreen.jpgvramları bütüncül bir şekilde uygulamaya dökmek amacıyla tasarlanan bu projede, bileşen (component) tabanlı mimari ve modern arayüz pratikleri ön planda tutulmuştur.
+
+## Ekran Görüntüs![image](frontend/src/image/ProjectScreen.jpg)
 
 ## 🚀 Özellikler
 

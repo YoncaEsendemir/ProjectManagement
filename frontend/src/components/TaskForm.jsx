@@ -85,8 +85,8 @@ function TaskForm({onSave,editingTask,members,onCancel}) {
         </div>
 
         <div>
-            <label className='block text-lg font-medium text-slate-900 mb-2'>Durum</label>
-            <select value={status} onChange={(e)=>setStatus(e.target.value)} className='w-full px-2 py-2 border-slate-300 rounded-lg text-lg  bg-white-80 focus:outline-none focus:border-indigo-500'>
+            <label className='block text-xl font-medium text-slate-900 mb-2'>Durum</label>
+            <select value={status} onChange={(e)=>setStatus(e.target.value)} className='w-full px-2 py-2 border-slate-300 rounded-lg text-base  bg-white-80 focus:outline-none focus:border-indigo-500'>
                 <option value="Yeni Görev">Yeni Görev (Sarı)</option>
                 <option value="Süren Görev">Süren Görev (Mavi)</option>
                 <option value="Biten Görev">Biten Görev (Yeşil)</option>
@@ -94,7 +94,7 @@ function TaskForm({onSave,editingTask,members,onCancel}) {
         </div>
 
         <div className='flex space-x-2 pt-2'>
-            <button type='submit' className='flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg text-xl font-medium hover:bg-indigo-700 transition'>
+            <button type='submit' className='flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg text-lg font-medium hover:bg-indigo-700 transition'>
                         {editingTask ? 'Görev Güncelle': 'Görev Ekle'}
             </button>
             {

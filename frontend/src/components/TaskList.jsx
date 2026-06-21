@@ -2,7 +2,7 @@ import React from 'react'
 
 function TaskList({tasks,members,onEdit,onDelete}) {
         if(tasks.length===0){
-            return <p className='text-sm text-slate-600 dark:text-slate-300 italic-center py-8'> Görev Eklenmedi</p>
+            return <p className='text-xl text-slate-600 dark:text-slate-300 italic-center py-8'> Görev Eklenmedi</p>
         }
         const getMemberName= (id)=>{
             const member= members.find(m => m.id===id)
@@ -29,29 +29,29 @@ function TaskList({tasks,members,onEdit,onDelete}) {
                 <div key={tasks.id} className={`p-3 border border-slate-100 border-l-[12px] ${styles.cardBorder} rounded-r-lg rounded-l-sm ${index %2==0 ? 'bg-white' : 'bg-blue-200/50'} flex flex-col justify-between shadow-sm `}>
                 <div>
                         <div className='flex justify-between items-start mb-2'>
-                            <h3 className='text-2xl font-semibold text-slate-900 break-words'>{task.title}</h3>
+                            <h3 className='text-lg font-semibold text-slate-900 break-words'>{task.title}</h3>
                             <span className={`text-[16px] px-2 py-0.5 rounded-full border ${styles.badge} font-medium tracking-wide whitespace-nowrap`}>
                                 {task.status}
                             </span>
                         </div>
-                        <p className='text-[18px] text-slate-600 mb-4'>{task.description ||'Açıklama belirtilmedi.'}</p>
+                        <p className='text-[16px] text-slate-600 mb-4'>{task.description ||'Açıklama belirtilmedi.'}</p>
 
                         {/* Tarih Bilgisi Gösterimi */}
-                            <div className='text-lg text-slate-500 flex space-x-3 mb-2 bg-slate-100/70 p-1 rounded-md w-fit'>
+                            <div className='text-sm text-slate-500 flex space-x-3 mb-2 bg-slate-100/70 p-1 rounded-md w-fit'>
                                 <span>📅 <b>Başlangıç:</b> {task.startDate || '-'}</span>
                                 <span>🏁 <b>Bitiş:</b> {task.endDate || '-'}</span>
                             </div>
                 </div>
 
                 <div className='flex justify-between items-center pt-2 border-t border-slate-200/60 mt-2'>
-                <span className="text-[20px] text-gray-700 bg-white px-2 py-1 rounded border border-gray-100">
+                <span className="text-[16px] text-gray-700 bg-white px-2 py-1 rounded border border-gray-100">
                 Sorumlu: <strong className="text-gray-700">{getMemberName(task.assignedTo)}</strong>
               </span>
               <div className="flex space-x-1">
-                <button onClick={() => onEdit(task)} className="text-xl text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded transition">
+                <button onClick={() => onEdit(task)} className="text-lg text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded transition">
                   Düzenle
                 </button>
-                <button onClick={() => onDelete(task.id)} className="text-xl text-red-600 hover:bg-red-50 px-2 py-1 rounded transition">
+                <button onClick={() => onDelete(task.id)} className="text-lg text-red-600 hover:bg-red-50 px-2 py-1 rounded transition">
                   Sil
                 </button>
               </div>

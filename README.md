@@ -4,7 +4,7 @@ Bu proje, modern yazılım geliştirme ekiplerinin iş ve üye takibini kolayla�
 
 Eğitim sürecinde edinilen kahttps://github.com/YoncaEsendemir/ProjectManagement/blob/main/frontend/src/image/ProjectScreen.jpgvramları bütüncül bir şekilde uygulamaya dökmek amacıyla tasarlanan bu projede, bileşen (component) tabanlı mimari ve modern arayüz pratikleri ön planda tutulmuştur.
 
-## Ekran Görüntüs![image](frontend/src/image/ProjectScreen.jpg)
+## Ekran Görüntüs![image](frontend/src/image/Project Screen.jpg)
 
 ## 🚀 Özellikler
 

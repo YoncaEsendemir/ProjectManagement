@@ -11,11 +11,11 @@ function MemberList({ members, onEdit, onDelete }) {
         <div key={member.id} className={`p-3 flex justify-between items-start group rounded
         transsition-colors ${index %2==0 ? 'bg-white' : 'bg-blue-200/50'}`}>
           <div className='space-y-1.5 max-[80%]'>
-            <h4 className='text-xl font-semibold text-slate-900 dark:text-slate-300'>{member.name}</h4>
+            <h4 className='text-2xl font-semibold text-slate-900 dark:text-slate-300'>{member.name}</h4>
             {/* Roller dizi yan yana etiketler - ?.map kullanarak hatayı engelledik */}
             <div className='flex flex-wrap gap-1'>
               {member.roles?.map((role, idx) => (
-                <span key={idx} className="text-[15px] bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-medium">{role}</span>
+                <span key={idx} className="text-[16px] bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-medium">{role}</span>
               ))}
             </div>
 
@@ -30,10 +30,10 @@ function MemberList({ members, onEdit, onDelete }) {
               )}
           </div>
           <div className="flex space-x-1 opacity-100  group-hover:opacity-100 transition-opacity pt-2">
-            <button onClick={() => onEdit(member)} className='text-lg text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded transition'>
+            <button onClick={() => onEdit(member)} className='text-xl text-indigo-600 hover:bg-indigo-50 px-2 py-1 rounded transition'>
               Düzenle
             </button>
-            <button onClick={() => onDelete(member.id)} className='text-lg text-red-600 hover:bg-red-50 px-2 py-1 rounded transition'>
+            <button onClick={() => onDelete(member.id)} className='text-xl text-red-600 hover:bg-red-50 px-2 py-1 rounded transition'>
               Sil
             </button>
           </div>

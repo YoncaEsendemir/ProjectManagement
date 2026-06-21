@@ -8,6 +8,8 @@ Eğitim sürecinde edinilen kavramları bütüncül bir şekilde uygulamaya dök
 ![Project Screen](https://github.com/YoncaEsendemir/ProjectManagement/blob/main/frontend/src/image/ProjectScreen.jpg)
 
 
+
+
 ![Project Screen](https://github.com/YoncaEsendemir/ProjectManagement/blob/main/frontend/src/image/ProjectScreen2.jpg) 
 
 ## 🚀 Özellikler

@@ -35,17 +35,17 @@ const handleSubmit=(e)=>{
     <form onSubmit={handleSubmit} className='space-y-4'>
         <div>
           <label className='block text-lg font-medium text-salte-800/50 dark:text-white/80 mb-1'> Ad Soyad</label>
-            <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Üye Ad" required className="w-full px-3 py-2 border border-slate-400 rounded-lg text-base focus:outline-none"/>
+            <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Üye Ad" required className="w-full px-3 py-2 border border-slate-400 dark:text-white/80 rounded-lg text-base focus:outline-none"/>
         </div>
 
         <div>
             <label className='block text-lg font-medium text-salte-800/50 dark:text-white/80 mb-1'>Roller</label>
-            <input type="text" value={rolesInput}  onChange={(e)=>setRolesInput(e.target.value)} required placeholder="Örn. Frontend Developer, Full-Stack" className="w-full px-3 py-2 border border-slate-400 rounded-base text-base focus:outline-none"/>
+            <input type="text" value={rolesInput}  onChange={(e)=>setRolesInput(e.target.value)} required placeholder="Örn. Frontend Developer, Full-Stack" className="w-full px-3 py-2 border border-slate-400 rounded-base dark:text-white/80 text-base focus:outline-none"/>
         </div>
 
         <div>
             <label className='block text-xl font-medium text-salte-800/50 dark:text-white/80 mb-1'>Skills</label>
-            <input type="text" value={skillsInput}  onChange={(e)=>setSkillsInput(e.target.value)} required placeholder="Örn. Java, C, JavaScript" className="w-full px-3 py-2 border border-slate-400 rounded-lg text-base focus:outline-none"/>
+            <input type="text" value={skillsInput}  onChange={(e)=>setSkillsInput(e.target.value)} required placeholder="Örn. Java, C, JavaScript" className="w-full px-3 py-2 border border-slate-400 dark:text-white/80 rounded-lg text-base focus:outline-none"/>
         </div>
         <div className="flex space-x-2 pt-2">
             <button type="submit" className='flex-1 bg-indigo-600 text-white py-2 px-3 rounded-lg text-lg font-medium hover:bg-indigo-700 transitions'> {editingMember ? 'Güncelle' : 'Kaydet'}</button>

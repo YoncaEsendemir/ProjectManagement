@@ -8,8 +8,8 @@ function MemberList({ members, onEdit, onDelete }) {
     <div className='divide-y divide-slate-100 max-h-72 overflow-y-auto p-2'>
       {members.map((member,index) => (
         
-        <div key={member.id} className={`p-3 flex justify-between items-start group rounded
-        transsition-colors ${index %2==0 ? 'bg-white' : 'bg-blue-200/50'}`}>
+        <div key={member.id} className={`p-3 flex justify-between border border-slate-300 rounded-lg items-start group rounded
+        transsition-colors ${index %2==0 ? 'bg-white dark:bg-slate-900/80' : 'bg-blue-200/50'}`}>
           <div className='space-y-1.5 max-[80%]'>
             <h4 className='text-lg font-semibold text-slate-900 dark:text-slate-300'>{member.name}</h4>
             {/* Roller dizi yan yana etiketler - ?.map kullanarak hatayı engelledik */}
@@ -24,7 +24,7 @@ function MemberList({ members, onEdit, onDelete }) {
               member.skills && member.skills.length > 0 && (
                 <div className='flex flex-wrap gap-1 pt-1'>
                   {member.skills.map((skill, idx) => (
-                    <span key={idx} className="text-[14px] bg-gray-100 text-gray-600 px-2 py-1 rounded">{skill}</span>
+                    <span key={idx} className="text-[14px] bg-gray-100 text-slate-700 px-2 py-1 rounded">{skill}</span>
                   ))}
                 </div>
               )}

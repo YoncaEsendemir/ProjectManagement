@@ -26,18 +26,18 @@ function TaskList({tasks,members,onEdit,onDelete}) {
         {tasks.map((task,index)=>{
             const styles=getStatusStyle(task.status);
             return(
-                <div key={tasks.id} className={`p-3 border border-slate-100 border-l-[12px] ${styles.cardBorder} rounded-r-lg rounded-l-sm ${index %2==0 ? 'bg-white' : 'bg-blue-200/50'} flex flex-col justify-between shadow-sm `}>
+                <div key={tasks.id} className={`p-3 border border-slate-300 border-l-[12px] ${styles.cardBorder} rounded-r-lg rounded-l-sm ${index %2==0 ? 'bg-white dark:bg-slate-900/80' : 'bg-blue-200/50 '} flex flex-col justify-between shadow-sm `}>
                 <div>
                         <div className='flex justify-between items-start mb-2'>
-                            <h3 className='text-lg font-semibold text-slate-900 break-words'>{task.title}</h3>
+                            <h3 className='text-lg font-semibold text-slate-900 dark:text-white/80 break-words'>{task.title}</h3>
                             <span className={`text-[16px] px-2 py-0.5 rounded-full border ${styles.badge} font-medium tracking-wide whitespace-nowrap`}>
                                 {task.status}
                             </span>
                         </div>
-                        <p className='text-[16px] text-slate-600 mb-4'>{task.description ||'Açıklama belirtilmedi.'}</p>
+                        <p className='text-[16px] text-slate-600 dark:text-white/80 mb-4'>{task.description ||'Açıklama belirtilmedi.'}</p>
 
                         {/* Tarih Bilgisi Gösterimi */}
-                            <div className='text-sm text-slate-500 flex space-x-3 mb-2 bg-slate-100/70 p-1 rounded-md w-fit'>
+                            <div className='text-sm text-slate-300 dark:text-slate-900 space-x-3 mb-2 bg-slate-100/70 p-1 rounded-md w-fit'>
                                 <span>📅 <b>Başlangıç:</b> {task.startDate || '-'}</span>
                                 <span>🏁 <b>Bitiş:</b> {task.endDate || '-'}</span>
                             </div>

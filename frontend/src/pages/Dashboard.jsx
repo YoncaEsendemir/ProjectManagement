@@ -117,8 +117,8 @@ function Dashboard() {
                     </h2>
                     <MemberForm onSave={saveMembers} editingMember={editingMember} onCancel={() => setEditingMember(null)} />
                 </div>
-                <div className='bg-slate-200/50 p-6 rounded-xl border border-slate-300 shadow-sm'>
-                    <h2 className='text-xl font-semibold mb-4 text-slate-900'>
+                <div className='bg-slate-200/50 dark:bg-slate-900/80 p-6 rounded-xl border border-slate-300 shadow-sm'>
+                    <h2 className='text-xl font-semibold mb-4 text-slate-900 dark:text-white'>
                         {editingTask ? 'Görev Düzenle' : 'Yeni Görev Ekle'}
                     </h2>
                     <TaskForm onSave={saveTask} editingTask={editingTask} members={members} onCancel={() => setEditingTask(null)} />
@@ -127,7 +127,7 @@ function Dashboard() {
 
             {/* Sağ Sütun: Görüntüleme, Yönetim Listeleri ve Takvim */}
             <div className='lg:col-span-2 flex flex-col space-y-6'>
-                <div className='bg-slate-200/50 p-6 rounded-xl border border-slate-200 shadow-sm'>
+                <div className='bg-slate-200/50 dark:bg-slate-900/80  p-6 rounded-xl border border-slate-200 shadow-sm'>
                     <div className='border-b border-slate-300 dark:border-slate-100 pb-3 mb-4'>
                         <h2 className='text-xl font-semibold text-slate-900 dark:text-white/80'>Üye Listesi {members.length}</h2>
                         <p className='text-lg mt-1 text-slate-900'>Ekip Üyeleri, rolleri ve yetenekleri</p>
@@ -135,20 +135,20 @@ function Dashboard() {
                     <MemberList members={members} onEdit={setEditingMember} onDelete={deleteMembers} />
                 </div>
 
-                <div className='bg-slate-200/50 p-6 rounded-xl border border-slate-200 shadow-sm'>
+                <div className='bg-slate-200/50 dark:bg-slate-900/80 p-6 rounded-xl border border-slate-200 shadow-sm'>
                     <div className='border-b border-slate-300 dark:border-slate-100 pb-3 mb-4'>
                         <h2 className='text-xl font-semibold text-slate-900 dark:text-white/80'> Görev Listesi {tasks.length} </h2>
-                        <p className='text-lg mt-1 text-slate-900'>İş takibi alanı</p>
+                        <p className='text-lg mt-1 text-slate-900 dark:text-white/80'>İş takibi alanı</p>
                     </div>
                     <TaskList tasks={tasks} members={members} onEdit={setEditingTask} onDelete={deleteTask} />
                 </div>
 
                 {/* Proje Görev Takvimi */}
-                <div className='bg-slate-200/50 p-6 rounded-xl border border-slate-200 shadow-sm w-full '>
+                <div className='bg-slate-200/50 dark:bg-slate-900/80 p-6 rounded-xl border border-slate-200 shadow-sm w-full '>
                     <div className='flex justify-between items-center border-b border-slate-200 pb-4 mb-4 '>
                         <div>
-                            <h2 className='text-xl font-bold text-slate-900'>📅 Proje Görev Takvimi</h2>
-                            <p className='text-lg text-slate-500 mt-0.5'>Görevlerin tarih aralıklarına göre takvim simülasyonu</p>
+                            <h2 className='text-xl font-bold text-slate-900 dark:text-white/80'>📅 Proje Görev Takvimi</h2>
+                            <p className='text-lg text-slate-500 dark:text-white/80 mt-0.5'>Görevlerin tarih aralıklarına göre takvim simülasyonu</p>
                         </div>
                         <div className='flex items-center space-x-2 bg-slate-100 p-2 rounded-lg text-lg font-medium'>
                             <button onClick={() => setCurrentDate(new Date(year, month - 1, 1))} className='px-2 py-1 hover:bg-white rounded transition shadow-xs'>◀</button>
@@ -158,7 +158,7 @@ function Dashboard() {
                     </div>
 
                     {/* Gün İsimleri Satırı */}
-                    <div className='grid grid-cols-7 gap-1 text-center text-lg font-semibold text-slate-500 mb-1'>
+                    <div className='grid grid-cols-7 gap-1 text-center text-lg dark:text-white/80 font-semibold text-slate-500 mb-1'>
                         <div>Pzt</div><div>Sal</div><div>Çar</div><div>Per</div><div>Cum</div><div>Cmt</div><div>Paz</div>
                     </div>
 
